@@ -21,8 +21,8 @@ function buyChisel(objKey) {
     let chiselElem = shopUpgradesObj[objKey]
     if (cheese >= chiselElem.price) {
         chiselElem.quantity++;
-        chiselElem.price += 50;
         cheese -= chiselElem.price;
+        chiselElem.price += 50;
         multiplied += chiselElem.multiplier;
         drawInfoUpgrades();
         drawInfoWindow();
@@ -34,8 +34,8 @@ function buyMoonDrill(objectKey) {
     let moonDrillElem = shopUpgradesObj[objectKey];
     if (cheese >= moonDrillElem.price) {
         moonDrillElem.quantity++;
-        moonDrillElem.price += 100;
         cheese -= moonDrillElem.price;
+        moonDrillElem.price += 100;
         multiplied += moonDrillElem.multiplier;
         drawInfoUpgrades();
         drawInfoWindow();
@@ -61,8 +61,8 @@ function buyMobileLaser(autoObjKey) {
     let mobileLaserElem = autoUpgradesObj[autoObjKey]
     if (cheese >= mobileLaserElem.price) {
         mobileLaserElem.quantity++;
-        mobileLaserElem.price += 250;
         cheese -= mobileLaserElem.price;
+        mobileLaserElem.price += 250;
         autoMultiplied += mobileLaserElem.multiplier;
         drawInfoUpgrades();
         drawInfoWindow();
@@ -73,8 +73,8 @@ function buyMoonTiteDrill(autoObjectKey) {
     let mtDrillElem = autoUpgradesObj[autoObjectKey]
     if (cheese >= mtDrillElem.price) {
         mtDrillElem.quantity++;
-        mtDrillElem.price += 500;
         cheese -= mtDrillElem.price;
+        mtDrillElem.price += 500;
         autoMultiplied += mtDrillElem.multiplier;
         drawInfoUpgrades();
         drawInfoWindow();
