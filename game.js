@@ -18,8 +18,8 @@ let shopUpgradesObj = {
 
 //lets set up a function that will handle "buying" a chisel
 function buyChisel(objKey) {
-    if (cheese >= 100) {
-        let chiselElem = shopUpgradesObj[objKey]
+    let chiselElem = shopUpgradesObj[objKey]
+    if (cheese >= chiselElem.price) {
         chiselElem.quantity++;
         chiselElem.price += 50;
         cheese -= 100;
@@ -31,8 +31,8 @@ function buyChisel(objKey) {
 
 //function for "buying" moon drill
 function buyMoonDrill(objectKey) {
-    if (cheese >= 200) {
-        let moonDrillElem = shopUpgradesObj[objectKey];
+    let moonDrillElem = shopUpgradesObj[objectKey];
+    if (cheese >= moonDrillElem.price) {
         moonDrillElem.quantity++;
         moonDrillElem.price += 100;
         cheese -= 200;
@@ -58,8 +58,8 @@ let autoUpgradesObj = {
 //functions for auto upgrades
 
 function buyMobileLaser(autoObjKey) {
-    if (cheese >= 500) {
-        let mobileLaserElem = autoUpgradesObj[autoObjKey]
+    let mobileLaserElem = autoUpgradesObj[autoObjKey]
+    if (cheese >= mobileLaserElem.price) {
         mobileLaserElem.quantity++;
         mobileLaserElem.price += 250;
         cheese -= 500;
@@ -70,8 +70,8 @@ function buyMobileLaser(autoObjKey) {
 }
 
 function buyMoonTiteDrill(autoObjectKey) {
-    if (cheese >= 1000) {
-        let mtDrillElem = autoUpgradesObj[autoObjectKey]
+    let mtDrillElem = autoUpgradesObj[autoObjectKey]
+    if (cheese >= mtDrillElem.price) {
         mtDrillElem.quantity++;
         mtDrillElem.price += 500;
         cheese -= 1000;
